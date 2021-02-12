@@ -671,9 +671,7 @@
 				    milk. They’re members of the Organic Valley cooperative, founded in 1988 in
 				    Wisconsin. Organic Valley holds roughly a third of the market share in
 				    organic milk sales with just over 1000 members who collectively govern the
-				    cooperative through regional delegates. (As I write this, Spud has just
-				    returned from a week in Wisconsin interviewing and selecting a new board
-				    member.)
+				    cooperative through regional delegates.
 				</p>
 				<p>
 				    Organic Valley is one of the few cooperatives in the U.S. that have a quota
@@ -703,7 +701,6 @@
 			<article>
 				<div class = "stepText" id = "mapLULegend" style = "height: 120px; padding-top: 20px; padding-bottom: 20px">
 				</div>
-				<img class = "stepText" src = "mapLU.jpg" style = "width: 100%; height: auto; margin: 0 auto 800 auto; opacity: 100%; border: 7px solid white;">
 				<div class = "stepText" data-step = 1 style = "margin-bottom: 500px">
 					<p>Over the hill, in the Irasburg-Coventry valley: a landscape perhaps more emblematic of the dairy industry these days. Corn fields from a single 2000-cow conventional farm amidst a smaller, scattering of organic farms.</p>
 				</div>
@@ -3212,16 +3209,16 @@
 			mapLU.on('load', function() {
 				mapLU.addSource('farms', {
 					'type': 'geojson',
-					'data': 'https://raw.githubusercontent.com/janicekchen/senior_fellowship/master/data/processed/organic_vt.geojson'
+					'data': 'https://gist.githubusercontent.com/janicekchen/31b7130ba15ef2b1f255cf10827848cd/raw/6cff10085f67aa9fc7347a4383ae28a02230b671/organic_vt.geojson'
 				});
 
 				mapLU.addSource('corn18', {
 							'type': 'geojson',
-							'data': 'https://raw.githubusercontent.com/janicekchen/senior_fellowship/master/data/processed/mapLU/LUcorn.geojson'
+							'data': 'https://gist.githubusercontent.com/janicekchen/31b7130ba15ef2b1f255cf10827848cd/raw/6cff10085f67aa9fc7347a4383ae28a02230b671/LUcorn.geojson'
 						});
 						mapLU.addSource('hay18', {
 							'type': 'geojson',
-							'data': 'https://raw.githubusercontent.com/janicekchen/senior_fellowship/master/data/processed/mapLU/LUhay.geojson'
+							'data': 'https://gist.githubusercontent.com/janicekchen/31b7130ba15ef2b1f255cf10827848cd/raw/6cff10085f67aa9fc7347a4383ae28a02230b671/LUhay.geojson'
 						});
 						mapLU.addLayer({
 							'id': 'corn18',
