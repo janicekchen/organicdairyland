@@ -5001,13 +5001,20 @@
 					     .style("mix-blend-mode", "multiply");
 
 					     		var colorClusters = color.clusters()
-					     		var f = d3.format(".1e")
+					     		var f = d3.format(".1f")
+
+
+					     		const meter2conversion = 4046.86;
+					     		for(var i=0; i<colorClusters.length; i++) {
+					     		    //Let's take the constant factor as 2
+					     		    colorClusters[i] = colorClusters[i] * meter2conversion;
+					     		}
 
 					     		var milkLegendData = [{index: 0, fill: "#e1edf8", value: minFilt + " to " + f(colorClusters[1])},
 					                           {index: 1, fill: "#abcfe6", value: f(colorClusters[1]) + " to " + f(colorClusters[3])},
 					                           {index: 2,fill: "#59a1cf", value: f(colorClusters[3]) + " to " + f(colorClusters[5])},
 					                           {index: 3, fill: "#1c6aaf", value: f(colorClusters[5]) + " to " + f(colorClusters[7])},
-					                           {index: 4, fill: "#08306b", value: f(colorClusters[7]) + " to " + f(maxFilt)}]
+					                           {index: 4, fill: "#08306b", value: f(colorClusters[7]) + " to " + f(maxFilt * meter2conversion)}]
 
 					              var milkLegend = svgHA.append("g").attr("opacity", 0)
 
@@ -5075,7 +5082,7 @@
 					                       .attr("x", contWindow.width - 200)
 					                       .attr("y", contWindow.height - 170)
 					                       .attr("fill", "white")
-					                       .text("Milk produced per acre (gallons)")
+					                       .text("Milk sold per acre (gallons)")
 
 
 				});
